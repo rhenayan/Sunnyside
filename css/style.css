@@ -35,6 +35,8 @@
     
 }
 
+
+
 *, *::before, *::after {
     margin: 0;
     padding: 0;
@@ -42,8 +44,18 @@
 
 }
 
+
+html {
+    scroll-behavior:smooth;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-weight: inherit;
+}
+
+a {
+    color:inherit;
+    text-decoration: none;
 }
 
 .banner {
@@ -417,6 +429,10 @@ h1, h2, h3, h4, h5, h6 {
 
     .hamburger {
         display:block;
+        position:fixed;
+        top: 25px;
+        right: 25px;
+      
     }
 
     .banner__header {
@@ -427,7 +443,7 @@ h1, h2, h3, h4, h5, h6 {
 
         position:fixed;
         left: 100%;
-        top: 190px;
+        top: 220px;
         flex-direction: column;
         background-color: var(--AccentColor);
         color: var(--SecondaryColor);
@@ -453,10 +469,14 @@ h1, h2, h3, h4, h5, h6 {
         transform: translate(-50%, -50%);
     }
 
-    .menu__item {
-        margin-right: 0;
+    a {
         margin-bottom: 25px;
-        
+    }
+
+    .menu__item {
+
+        margin-right: 0;
+       
     }
 
     .menu__contact {
@@ -474,7 +494,7 @@ h1, h2, h3, h4, h5, h6 {
         display:none;
     }
 
-    
+
     .main__text {
         font-size: var(--fsizeBanner-md);
     }
