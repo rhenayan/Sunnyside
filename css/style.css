@@ -1,0 +1,620 @@
+:root {
+
+
+    --mainColor: #27313c;
+    --SecondaryColor: #929197;
+    --AccentColor: rgb(250, 255, 252);
+
+
+    --PrimaryFont: 'Fraunces', serif;
+    --SecondaryFont:'Barlow', sans-serif;
+
+    --fsizeparagraph-lg: 1.1rem;
+    --fsizeparagraph-md: 1rem;
+    --fsizeparagraph-sm: 0.9rem;
+
+    --fsizeLink-lg: 1.3rem;
+    --fsizeLink-md: 1.2rem;
+    --fsizeLink-sm: 1.0rem;
+
+    
+    --fsizeBanner-lg: 4.5rem;
+    --fsizeBanner-md: 3rem;
+    --fsizeBanner-sm: 2.8rem;
+
+    --fsizeHeading-lg: 3rem;
+    --fsizeHeading-md: 2.5rem;
+    --fsizeHeading-sm: 2rem;
+
+    --fsizeSubHeading-lg: 2rem;
+    --fsizeSubHeading-md: 1.8rem;
+
+    --lineHeight-sm: 1.8;
+   
+    /* --fsizeHeading-md: */
+    
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: inherit;
+}
+
+.banner {
+    display:flex;
+    flex-direction: column;
+    height: 100vh;
+    min-height: 600px;
+    background-image: url(/sunnyside-agency-landing-page-main/images/desktop/image-header.jpg) ;
+    background-position: center bottom;
+    background-size: cover;
+}
+
+.banner__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0 25px;
+}
+
+/*! TODO Later*/
+.header__menu {
+    display:flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: var(--fsizeparagraph-lg);
+    color: var(--AccentColor);
+    font-family: var(--SecondaryFont);
+    font-weight: 500;
+  
+   
+}
+
+.menu__item {
+    margin-right: 30px;
+    
+}
+
+/*! TODO Later*/
+.menu__contact {
+    padding: 4px 15px;
+    border-radius: 15px; 
+    padding: 10px 25px;
+    border-radius: 9999px;
+    background-color: var(--AccentColor);
+    font-family: var(--PrimaryFont); 
+    color: var(--mainColor);
+    text-transform: uppercase;
+    transition: 0.2s all ease-in-out;
+}
+
+.menu__contact:hover {
+    display:block;
+    background-color: rgb(250, 255, 252, 0.50);
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    color: var(--AccentColor);
+   
+}
+
+.hamburger {
+    display:none;
+    cursor:pointer;
+}
+
+/*! TODO Later*/
+.banner__main {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    font-size: var(--fsizeBanner-lg);
+    text-transform: uppercase;
+    font-family: var(--PrimaryFont);
+    color: var(--AccentColor);
+    text-align: center;
+
+}
+
+.main__text {
+    letter-spacing: 5px;
+}
+
+.main__arrow {
+    margin-top: 50px;
+    cursor: pointer;
+}
+
+
+.about-us {
+    display:flex;
+    height: 500px;
+}
+
+.flex {
+    flex: 1;
+}
+
+.about-us__text {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-wrapper {
+    width: 70%;
+   
+}
+
+/*! TODO Later*/
+.about-us__title {
+    font-family: var(--PrimaryFont);
+    font-size: var(--fsizeHeading-lg);
+    letter-spacing: 2px;
+    color:var(--mainColor);
+    margin-bottom: 25px;
+}
+
+/*! TODO Later*/
+.about-us__paragraph {
+    font-family: var(--SecondaryFont);
+    font-weight: 500;
+    font-size: var(--fsizeparagraph-lg);
+    color: var(--SecondaryColor);
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.about-us__link {
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: var(--PrimaryFont);
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-size: var(--fsizeLink-lg);
+    color:var(--mainColor);
+   
+    
+
+
+    
+}
+
+
+
+.about-us__link::after{
+    content: " ";
+    display:block;
+    width: 160px;
+    height: 10px;
+    border-radius: 5px;
+    position:relative;
+    top:-8px;
+    left: -5px;
+    z-index: -1;
+    transition: 0.2s all ease-in-out;
+  
+}
+
+.hover--yellow:hover::after {
+    background-color: #fbd601;
+    
+}
+
+.hover--red:hover::after {
+    background-color:#ff7669;
+
+}
+
+.about-us__image img {
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.order {
+    order: 2;
+}
+
+
+.service {
+    display: flex;
+    height: 500px;
+    
+    
+}
+
+.service__left {
+
+   background: url(/sunnyside-agency-landing-page-main/images/desktop/image-graphic-design.jpg) no-repeat top;
+   background-size:cover;
+
+   align-items:flex-end;
+}
+
+.service__right {
+    background: url(/sunnyside-agency-landing-page-main/images/desktop/image-photography.jpg) no-repeat top;
+   background-size:cover;
+}
+
+
+.service__left, 
+.service__right {
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.service__title {
+    font-family: var(--PrimaryFont);
+    font-size: var(--fsizeSubHeading-lg);
+    margin-bottom: 20px;
+  
+}
+
+.service__paragraph {
+    font-family: var(--SecondaryFont);
+    font-size: var(--fsizeparagraph-lg);
+    font-weight: 500;
+    line-height: 1.5;
+
+}
+
+.text--green {
+    color: #1d564a;
+}
+
+.text--blue {
+    color: #0f5171;
+}
+
+
+.service .text-wrapper{
+    height: 190px;
+}
+
+
+.testimonials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 100px;
+    /* background-color: ; */
+}
+
+.testimonials__heading {
+
+    font-family: var(--PrimaryFont);
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    color:#afadad;
+    margin-bottom: 40px;
+    
+}
+
+.clients-wrapper {
+    display:flex;
+    justify-content: space-between;
+}
+
+.client {
+    display:flex;
+    flex-direction:column;
+    flex:0.3;
+    align-items:center;
+}
+
+
+.client__thumbmail {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+
+.client__testimonial {
+    font-family: var(--SecondaryFont);
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--SecondaryColor);
+    text-align:center;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.client__detail {
+    text-align:center;
+}
+
+.detail__name {
+    font-family: var(--PrimaryFont);
+    letter-spacing: 2px;
+    color:var(--mainColor);
+}
+
+.detail__profession {
+    margin-top: 8px;
+    font-family: var(--SecondaryFont);
+    font-weight: 500;
+    color: #cbcac8f8;
+    font-size: 14px;
+}
+
+
+.gallery {
+    display:flex;
+}
+
+.gallery__image {
+    display:block;
+    flex: 0.25;
+    width: 100%;
+}
+
+.footer {
+    background-color: #90d4c5;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    padding: 50px 0;
+}
+
+
+
+
+.footer__nav {
+    margin-top: 20px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.nav__link {
+    padding: 10px;
+    color: #1d564a;
+    font-family: var(--SecondaryFont);
+    font-size:var(--fsizeparagraph-lg);
+    font-weight: 500;
+}
+
+.nav__link:hover{
+    color:var(--AccentColor);
+}
+
+.footer__social-media {
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+.footer__icon {
+    padding: 5px;
+}
+
+
+/**MEDIA**/
+
+
+
+@media screen and (max-width: 768px) {
+
+   
+    .banner {
+        height: 0;
+    }
+
+    .hamburger {
+        display:block;
+    }
+
+    .banner__header {
+        width: 100%;
+    }
+
+    .header__menu {
+
+        position:fixed;
+        left: 100%;
+        top: 190px;
+        flex-direction: column;
+        background-color: var(--AccentColor);
+        color: var(--SecondaryColor);
+        width:89%;
+        padding: 30px 0;
+       
+    }
+
+    .header__menu::before {
+    content: "";
+      width: 0;
+      height: 0;
+      border-bottom: 20px solid var(--AccentColor);;;
+      border-left: 20px solid transparent;
+      margin-left: auto;
+      position:absolute;
+      right: 0;
+      top: -20px;
+    }
+
+    .header__menu.active {
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .menu__item {
+        margin-right: 0;
+        margin-bottom: 25px;
+        
+    }
+
+    .menu__contact {
+        --menuContactBG: #fbd601;
+        font-family: var(--PrimaryFont);
+        text-transform: uppercase;
+        font-size: 15px;
+        padding: 10px 25px;
+        background-color: var(--menuContactBG);
+        color: var(--mainColor);
+        border-radius: 9999px;
+    }
+
+    .menu__contact:hover {
+        display:none;
+    }
+
+    
+    .main__text {
+        font-size: var(--fsizeBanner-md);
+    }
+
+    .main__arrow {
+        height: 80px;
+    }
+
+    .banner__main {
+        flex-grow: 0.5;
+    }
+
+
+    .about-us__title {
+       font-size: var(--fsizeHeading-md);
+    }
+
+    .about-us__link {
+        font-size: var(--fsizeLink-md);
+    }
+
+    .about-us__link::after {
+        display:none;
+    }
+
+
+    .service__title {
+        font-size: var(--fsizeSubHeading-md);
+    }
+
+    .service__paragraph {
+        font-size: var(--fsizeparagraph-md);
+    }
+
+    .service .text-wrapper {
+        height: 200px;
+    }
+
+    .testimonials {
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+
+    .nav__link {
+        font-size: var(--fsizeparagraph-md);
+    }
+    
+}
+
+
+
+@media screen and (max-width: 480px) {
+
+    .main__text {
+        font-size: var(--fsizeBanner-sm);
+        letter-spacing: 3px;
+    }
+    .about-us {
+        flex-direction:column;
+        height: auto;
+    }
+
+    .about-us .text-wrapper {
+        width: 80%;
+        padding: 4rem 0;
+        text-align:center;
+    }
+
+    .about-us__text {
+        order: 1;
+    }
+
+    .about-us__title {
+        font-size: var( --fsizeHeading-sm);
+    }
+
+    .about-us__paragraph {
+        font-size: var(--fsizeparagraph-sm);
+        line-height: var(--lineHeight-sm);
+    }
+
+    .about-us__link {
+        font-size: var(--fsizeLink-sm);
+    }
+
+    .service {
+        flex-direction: column;
+        min-height: 900px;
+    }
+
+    .service .text-wrapper {
+        width: 90%;
+    }
+
+    .service__paragraph {
+        font-size: var(--fsizeparagraph-sm);
+        line-height: var(--lineHeight-sm);
+    }
+
+    .testimonials {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+
+    .testimonials__heading {
+        font-size: 1.1rem;
+       
+    }
+
+    .client__testimonial {
+        font-size: var(--fsizeparagraph-sm);
+        line-height: var(--lineHeight-sm);
+    }
+    
+
+
+    .clients-wrapper {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+   
+    .gallery {
+        flex-wrap:wrap;
+    }
+
+    .gallery__image {
+        flex-basis: 50%;
+    }
+
+    .nav__link {
+        padding: 8px;
+        font-size: var(--fsizeparagraph-sm);
+
+    }
+    .footer__social-media {
+        margin-top: 50px;
+    }
+
+    .footer__icon {
+        padding: 10px;
+    }
+}
